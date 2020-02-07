@@ -7,7 +7,7 @@ public class Rectangle implements Shape{
    private double width;
    private double height;
 
-   public Rectangle(Point p, double w, double h, Color c){
+   public Rectangle(double w, double h, Point p, Color c){
       color = c;
       topLeft = p;
       width = w;
@@ -16,9 +16,6 @@ public class Rectangle implements Shape{
 
    public void setColor(Color c){
       color = c;
-   }
-   public void setTopLeft(Point p){
-      topLeft = p;
    }
    public void setWidth(double w){
       width = w;

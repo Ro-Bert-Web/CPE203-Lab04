@@ -6,7 +6,7 @@ public class Circle implements Shape{
    private Point center;
    private double radius;
 
-   public Circle(Point p, double r, Color c){
+   public Circle(double r, Point p, Color c){
       color = c;
       center = p;
       radius = r;
@@ -14,9 +14,6 @@ public class Circle implements Shape{
 
    public void setColor(Color c){
       color = c;
-   }
-   public void setCenter(Point p){
-      center = p;
    }
    public void setRadius(double r){
       radius = r;

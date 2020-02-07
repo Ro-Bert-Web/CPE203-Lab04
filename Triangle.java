@@ -17,15 +17,6 @@ public class Triangle implements Shape{
    public void setColor(Color c){
       color = c;
    }
-   public void setVertexA(Point p){
-      a = p;
-   }
-   public void setVertexB(Point p){
-      b = p;
-   }
-   public void setVertexC(Point p){
-      c = p;
-   }
    public void translate(Point p){
       a.setLocation(a.getX() + p.getX(), a.getY() + p.getY());
       b.setLocation(b.getX() + p.getX(), b.getY() + p.getY());
@@ -45,9 +36,15 @@ public class Triangle implements Shape{
       return c;
    }
    public double getArea(){
-      return 0.0;
+      return Math.abs(
+         ((a.getX() - b.getX()) * (a.getY()) -(c.getY())) - ((a.getY() - b.getY()) * (a.getX() - c.getX()))
+      ) / 2;
    }
    public double getPerimeter(){
-      return 0.0;
+      return (
+         Math.sqrt(Math.pow(a.getX() - b.getX(), 2) + Math.pow(a.getY() - b.getY(), 2)) +
+         Math.sqrt(Math.pow(b.getX() - c.getX(), 2) + Math.pow(b.getY() - c.getY(), 2)) +
+         Math.sqrt(Math.pow(c.getX() - a.getX(), 2) + Math.pow(c.getY() - a.getY(), 2))
+      );
    }
 }
